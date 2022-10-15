@@ -15,7 +15,7 @@ const Project = ({ project }) => {
       <h3 className="underline text-2xl md:text-xl 2xl:text-2xl">
         {name} - {subtitle}
       </h3>
-      <div className="flex flex-row lg:flex-col gap-3 lg:gap-1 my-1">
+      <div className="flex flex-row lg:flex-col gap-1 lg:gap-1 my-1">
         <h4 className="roboto text-[#8D3030] capitalize text-xl md:text-lg 2xl:text-xl">
           {fromAndTo}
         </h4>

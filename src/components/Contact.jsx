@@ -19,7 +19,7 @@ const Contact = () => {
       className="flex flex-col items-center justify-center h-screen my-1 text-center lg:snap-start"
     >
       <p className="text-4xl mb-3 ">
-        If your’re cool with making the first move
+        If you’re cool with making the first move
         <span className="text-[#8D3030]">?</span>
       </p>
 
