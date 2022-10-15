@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  cursor: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Anton", sans-serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/* BURGER MENU & ANIMATION */
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.menu-btn > div {
+  width: 28px;
+  height: 3px;
+  margin: 3px;
+  border-radius: 100px;
+}
+
+.open:nth-child(1) {
+  transform: rotate(45deg) translateY(13px);
+  transition: all 400ms ease-in-out;
+}
+
+.open:nth-child(2) {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.open:nth-child(3) {
+  transform: rotate(-45deg) translateY(-13px);
+  transition: all 400ms ease-in-out;
+}
+
+.close:nth-child(1) {
+  transform: rotate(0) translateY(0);
+  transition: all 400ms ease-in-out;
+}
+
+.close:nth-child(2) {
+  opacity: 1;
+  width: 20px;
+  transition: all 400ms ease-in-out;
+}
+
+.close:nth-child(3) {
+  transform: rotate(0) translateY(0);
+  transition: all 400ms ease-in-out;
+}
+
+/* Scrolling tell animation (Marquee */
+
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  width: calc(250px * 14);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
 }
