@@ -16,7 +16,6 @@ export const CursorProvider = ({ children }) => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
-
       transition: {
         type: "tween",
         duration: 0.1,
@@ -27,7 +26,6 @@ export const CursorProvider = ({ children }) => {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
       scale: 8,
-      backgroundColor: "white",
       mixBlendMode: "difference",
     },
   };
