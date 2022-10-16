@@ -37,7 +37,7 @@ export const projectData = [
     subtitle: "A face recognition app.",
     fromAndTo: "August 2021 - August 2021",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nunc et nunc. ",
+      "Smartbrain is a application that allow you to detect faces in any picture you upload",
     image: img2,
     link: "https://react-smartbrain-app.vercel.app/",
     github: "https://github.com/UziStacks/react-smartbrain-app",
@@ -67,7 +67,7 @@ export const projectData = [
     subtitle: "A movie app for the modern moviegoer.",
     fromAndTo: "August 2021 - August 2021",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.  Donec auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget aliquam nisl nunc et nunc.",
+      "MovieApp is a application that allow you to search for movies and tv shows and save them to your watchlist",
     image: img3,
     link: "https://next-movie-app-five.vercel.app/",
     github: "https://github.com/UziStacks/next-movie-app",
