@@ -6,12 +6,12 @@ export const projectData = [
     id: 1,
     name: "Travlr.",
     subtitle: "A travel app for the modern traveler.",
-    fromAndTo: "August 2021 - August 2021",
+    fromAndTo: "Under Construction",
     description:
       "Travlr. is a application that allow you to plan your trips day by day with your friends and family  and save the best memories from that trip",
     image: img1,
-    link: "https://picsum.photos/200/300",
-    github: "https://picsum.photos/200/300",
+    link: "/",
+    github: "/",
     tech: [
       {
         id: 1,
@@ -35,7 +35,7 @@ export const projectData = [
     id: 2,
     name: "Smartbrain",
     subtitle: "A face recognition app.",
-    fromAndTo: "August 2021 - August 2021",
+    fromAndTo: "July 2021 - Present",
     description:
       "Smartbrain is a application that allow you to detect faces in any picture you upload",
     image: img2,
@@ -65,7 +65,7 @@ export const projectData = [
     id: 3,
     name: "MovieApp",
     subtitle: "A movie app for the modern moviegoer.",
-    fromAndTo: "August 2021 - August 2021",
+    fromAndTo: "July 2021 - Present",
     description:
       "MovieApp is a application that allow you to search for movies and tv shows and save them to your watchlist",
     image: img3,
