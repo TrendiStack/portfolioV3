@@ -16,6 +16,7 @@ export const CursorProvider = ({ children }) => {
     default: {
       x: mousePosition.x - 16,
       y: mousePosition.y - 16,
+
       transition: {
         type: "tween",
         duration: 0.1,
