@@ -4,6 +4,7 @@ import github from "../assets/icons/github.svg";
 import linkedin from "../assets/icons/linkedin.svg";
 import cv from "../assets/resume/SoftwareEngineerResume2 (2) (1).pdf";
 import { BurgerMenuContext } from "../context/burgerMenu.context";
+import { CursorContext } from "../context/cursor.context";
 import { ObserverContext } from "../context/observer.context";
 import { SidebarContext } from "../context/sidebar.context";
 
@@ -12,6 +13,7 @@ const Menu = () => {
   const { headerIsVisible, skillsIsVisible, workIsVisible, contactIsVisible } =
     useContext(ObserverContext);
   const { header, skills, work, contact } = useContext(SidebarContext);
+  const { mouseOver } = useContext(CursorContext);
 
   const scrollTo = (ref) => {
     toggleBurger();
@@ -27,12 +29,18 @@ const Menu = () => {
           : "w-5 h-5 z-[100] rounded-full opacity-0"
       } flex flex-col justify-between fixed top-0 right-0 bg-white text-black text-center py-20 transition-all duration-500 z-[1]`}
     >
-      <p className="uppercase text-3xl">
+      <p
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
+        className="uppercase text-3xl"
+      >
         <a href={cv} target="blank">
           my resume
         </a>
       </p>
       <p
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
         onClick={() => scrollTo(header)}
         className={`${
           headerIsVisible ? "text-[#8D3030]" : ""
@@ -41,6 +49,8 @@ const Menu = () => {
         About
       </p>
       <p
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
         onClick={() => scrollTo(skills)}
         className={`${
           skillsIsVisible ? "text-[#8D3030]" : ""
@@ -49,6 +59,8 @@ const Menu = () => {
         Skills
       </p>
       <p
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
         onClick={() => scrollTo(work)}
         className={`${
           workIsVisible ? "text-[#8D3030]" : ""
@@ -57,6 +69,8 @@ const Menu = () => {
         Work
       </p>
       <p
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
         onClick={() => scrollTo(contact)}
         className={`${
           contactIsVisible ? "text-[#8D3030]" : ""
@@ -93,6 +107,8 @@ const Menu = () => {
       </div>
       <address>
         <a
+          onMouseEnter={mouseOver}
+          onMouseLeave={mouseOver}
           href="mailto:terel.phillips23@gmail.com"
           className="uppercase text-3xl cursor-default"
         >

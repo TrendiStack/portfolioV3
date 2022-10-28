@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { CursorContext } from "../context/cursor.context";
 import { ObserverContext } from "../context/observer.context";
 import { SidebarContext } from "../context/sidebar.context";
 
@@ -6,13 +7,19 @@ const SideNav = () => {
   const { headerIsVisible, skillsIsVisible, workIsVisible, contactIsVisible } =
     useContext(ObserverContext);
   const { header, skills, work, contact } = useContext(SidebarContext);
+  const { mouseOver } = useContext(CursorContext);
 
   const scrollTo = (ref) => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <div className="hidden lg:flex flex-col gap-2 fixed top-[50%] xl:left-[5%] left-5 -translate-y-[50%] transition-all duration-700">
-      <div onClick={() => scrollTo(header)} className="flex items-center gap-2">
+      <div
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
+        onClick={() => scrollTo(header)}
+        className="flex items-center gap-2"
+      >
         <div className="flex justify-center items-center w-5 h-5 group bg-white rounded-full">
           <div
             className={`${
@@ -28,7 +35,12 @@ const SideNav = () => {
           Me
         </p>
       </div>
-      <div onClick={() => scrollTo(skills)} className="flex items-center gap-2">
+      <div
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
+        onClick={() => scrollTo(skills)}
+        className="flex items-center gap-2"
+      >
         <div className="flex justify-center items-center w-5 h-5 group bg-white rounded-full">
           <div
             className={`${
@@ -44,7 +56,12 @@ const SideNav = () => {
           SKills
         </p>
       </div>
-      <div onClick={() => scrollTo(work)} className="flex items-center gap-2">
+      <div
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
+        onClick={() => scrollTo(work)}
+        className="flex items-center gap-2"
+      >
         <div className="flex justify-center items-center w-5 h-5 group bg-white rounded-full">
           <div
             className={`${
@@ -61,6 +78,8 @@ const SideNav = () => {
         </p>
       </div>
       <div
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
         onClick={() => scrollTo(contact)}
         className="flex items-center gap-2"
       >

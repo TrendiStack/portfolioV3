@@ -3,8 +3,10 @@ import { ProjectContext } from "../context/projects.context";
 import { AiOutlineExpand } from "react-icons/ai";
 
 import Tech from "./Tech";
+import { CursorContext } from "../context/cursor.context";
 
 const Project = ({ project }) => {
+  const { mouseOver } = useContext(CursorContext);
   const { handleModal, setProjectNum } = useContext(ProjectContext);
 
   const { id, name, subtitle, fromAndTo, description, link, github, tech } =
@@ -29,6 +31,8 @@ const Project = ({ project }) => {
       <div className="flex items-center justify-between text-4xl">
         <div className="flex">
           <a
+            onMouseEnter={mouseOver}
+            onMouseLeave={mouseOver}
             href={link}
             className="bg-[#8D3030] text-white text-sm px-5 py-2 mr-2 rounded-md mt-2 cursor-none"
             target="_blank"
@@ -37,6 +41,8 @@ const Project = ({ project }) => {
             Live
           </a>
           <a
+            onMouseEnter={mouseOver}
+            onMouseLeave={mouseOver}
             href={github}
             className="bg-transparent border-solid border-2 border-[#8D3030] text-white text-sm px-5 py-2 rounded-md mt-2 cursor-none"
             target="_blank"
@@ -46,6 +52,8 @@ const Project = ({ project }) => {
           </a>
         </div>
         <div
+          onMouseEnter={mouseOver}
+          onMouseLeave={mouseOver}
           onClick={() => {
             handleModal();
             setProjectNum(id - 1);

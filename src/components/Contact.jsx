@@ -1,9 +1,11 @@
 import React, { useCallback, useContext } from "react";
 import copyicon from "../assets/icons/copyicon.svg";
+import { CursorContext } from "../context/cursor.context";
 import { ObserverContext } from "../context/observer.context";
 import { SidebarContext } from "../context/sidebar.context";
 
 const Contact = () => {
+  const { mouseOver } = useContext(CursorContext);
   const { contactObserver } = useContext(ObserverContext);
   const { contact } = useContext(SidebarContext);
   const setRefs = useCallback(
@@ -25,13 +27,20 @@ const Contact = () => {
 
       <p className="roboto text-2xl mb-3">
         let’s start creating something awesome{" "}
-        <a href="mailto:terel.phillips23@gmail.com" className="cursor-default">
+        <a
+          onMouseEnter={mouseOver}
+          onMouseLeave={mouseOver}
+          href="mailto:terel.phillips23@gmail.com"
+          className="cursor-default"
+        >
           <span className="underline">terel.phillips23</span>
           <span className="text-[#8D3030]">@</span>
           <span className="underline">gmail.com</span>
         </a>
       </p>
       <img
+        onMouseEnter={mouseOver}
+        onMouseLeave={mouseOver}
         onClick={() => {
           navigator.clipboard.writeText("terel.phillips23@gmail.com");
         }}
