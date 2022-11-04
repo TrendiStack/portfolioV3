@@ -1,4 +1,4 @@
-import img1 from "./assets/mockups/projectmockup.png";
+import img1 from "./assets/mockups/Travlr.png";
 import img2 from "./assets/mockups/smartbrainmockup.png";
 import img3 from "./assets/mockups/moviemockup.png";
 export const projectData = [
