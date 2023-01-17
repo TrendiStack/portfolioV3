@@ -1,11 +1,11 @@
-import { useCallback, useContext } from "react";
-import { ObserverContext } from "../context/observer.context";
-import { SidebarContext } from "../context/sidebar.context";
-import { ProjectContext } from "../context/projects.context";
-import Project from "./Project";
-import { projectData } from "../projectData";
-import Mockup from "./Mockup";
-import { BurgerMenuContext } from "../context/burgerMenu.context";
+import { useCallback, useContext } from 'react';
+import { ObserverContext } from '../context/observer.context';
+import { SidebarContext } from '../context/sidebar.context';
+import { ProjectContext } from '../context/projects.context';
+import Project from './Project';
+import { projectData } from '../projectData';
+import Mockup from './Mockup';
+import { BurgerMenuContext } from '../context/burgerMenu.context';
 
 const Work = () => {
   const { workObserver } = useContext(ObserverContext);
@@ -13,7 +13,7 @@ const Work = () => {
   const { work } = useContext(SidebarContext);
   const { burgerState } = useContext(BurgerMenuContext);
   const setRefs = useCallback(
-    (node) => {
+    node => {
       work.current = node;
       workObserver(node);
     },
@@ -27,13 +27,16 @@ const Work = () => {
     >
       <div
         className={`${
-          burgerState === "close" ? "relative z-[101]" : ""
+          burgerState === 'close' ? 'relative z-[101]' : ''
         } flex flex-col justify-center gap-10 md:gap-1 2xl:gap-10 h-screen`}
       >
-        {projectData.map((project) => (
+        {projectData.map(project => (
           <Project key={project.id} project={project} />
         ))}
-        <Mockup image={projectData[projectNum].image} />
+        <Mockup
+          image={projectData[projectNum].image}
+          gif={projectData[projectNum].gif}
+        />
       </div>
     </div>
   );

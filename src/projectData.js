@@ -1,88 +1,89 @@
-import img1 from "./assets/mockups/Travlr.png";
-import img2 from "./assets/mockups/smartbrainmockup.png";
-import img3 from "./assets/mockups/moviemockup.png";
+import yccImg from './assets/mockups/yccmockup.png';
+import avantImg from './assets/mockups/avantmockup.png';
+import pv3Img from './assets/mockups/projectmockup.png';
+
+import avantgif from './assets/gifs/avant/avant gif.gif';
+import yccgif from './assets/gifs/yourcasaconcierge/ycc.gif';
+import pv3gif from './assets/gifs/portfoliov3/pv3.gif';
+
 export const projectData = [
   {
     id: 1,
-    name: "Travlr.",
-    subtitle: "A travel app for the modern traveler.",
-    fromAndTo: "Under Construction",
-    description:
-      "Travlr. is a application that allow you to plan your trips day by day with your friends and family  and save the best memories from that trip",
-    image: img1,
-    link: "/",
-    github: "/",
+    name: 'Your Casa Concierge',
+    subtitle: 'Full service home rental concierge service',
+    fromAndTo: 'November 2022 - Present',
+    description: 'Landing page for a concierge service',
+    image: yccImg,
+    gif: yccgif,
+    link: 'https://www.yourcasaconcierge.com/',
+    github: 'https://github.com/UziStacks/yourcasaconcierge',
     tech: [
       {
         id: 1,
-        name: "React",
+        name: 'React',
       },
       {
         id: 2,
-        name: "Tailwind",
+        name: 'Tailwind',
       },
       {
         id: 3,
-        name: "Express",
-      },
-      {
-        id: 4,
-        name: "MongoDB",
+        name: 'Sanity',
       },
     ],
   },
   {
     id: 2,
-    name: "Smartbrain",
-    subtitle: "A face recognition app.",
-    fromAndTo: "July 2021 - Present",
-    description:
-      "Smartbrain is a application that allow you to detect faces in any picture you upload",
-    image: img2,
-    link: "https://react-smartbrain-app.vercel.app/",
-    github: "https://github.com/UziStacks/react-smartbrain-app",
-
+    name: 'AVANT',
+    subtitle: "Men's Fashion E-commerce",
+    fromAndTo: 'December 2022 - Present',
+    description: 'This is a Full-stack e-commerce web application',
+    image: avantImg,
+    gif: avantgif,
+    link: 'https://avant-fullstack.vercel.app/',
+    github: 'https://github.com/UziStacks/avant-fullstack',
     tech: [
       {
         id: 1,
-        name: "React",
+        name: 'React',
       },
       {
         id: 2,
-        name: "Sass",
+        name: 'Tailwind',
       },
       {
         id: 3,
-        name: "Express",
+        name: 'Express',
       },
       {
         id: 4,
-        name: "Postgres",
+        name: 'MongoDB',
       },
     ],
   },
   {
     id: 3,
-    name: "MovieApp",
-    subtitle: "A movie app for the modern moviegoer.",
-    fromAndTo: "July 2021 - Present",
-    description:
-      "MovieApp is a application that allow you to search for movies and tv shows and save them to your watchlist",
-    image: img3,
-    link: "https://next-movie-app-five.vercel.app/",
-    github: "https://github.com/UziStacks/next-movie-app",
+    name: 'PortfolioV3',
+    subtitle: 'My Portfolio',
+    fromAndTo: 'July 2021 - Present',
+    description: 'This is my portfolio website',
+    image: pv3Img,
+    gif: pv3gif,
+    link: 'https://www.terel-phillips.ca/',
+    github: 'https://github.com/UziStacks/portfolioV3',
+
     tech: [
       {
         id: 1,
-        name: "Next",
+        name: 'React',
       },
       {
         id: 2,
-        name: "Tailwind",
+        name: 'Tailwind',
       },
       {
         id: 3,
-        name: "Firebase",
+        name: 'Framer-motion',
       },
     ],
   },
