@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
-import devicon from "../assets/icons/devicon.svg";
-import github from "../assets/icons/github.svg";
-import linkedin from "../assets/icons/linkedin.svg";
-import cv from "../assets/resume/SoftwareEngineerResume2 (2) (1).pdf";
-import { BurgerMenuContext } from "../context/burgerMenu.context";
-import { CursorContext } from "../context/cursor.context";
-import { ObserverContext } from "../context/observer.context";
-import { SidebarContext } from "../context/sidebar.context";
+import React, { useContext } from 'react';
+import devicon from '../assets/icons/devicon.svg';
+import github from '../assets/icons/github.svg';
+import linkedin from '../assets/icons/linkedin.svg';
+import cv from '../assets/resume/SoftwareEngineerResumeLatest.pdf';
+import { BurgerMenuContext } from '../context/burgerMenu.context';
+import { CursorContext } from '../context/cursor.context';
+import { ObserverContext } from '../context/observer.context';
+import { SidebarContext } from '../context/sidebar.context';
 
 const Menu = () => {
   const { toggleBurger, burgerState } = useContext(BurgerMenuContext);
@@ -15,18 +15,18 @@ const Menu = () => {
   const { header, skills, work, contact } = useContext(SidebarContext);
   const { mouseOver } = useContext(CursorContext);
 
-  const scrollTo = (ref) => {
+  const scrollTo = ref => {
     toggleBurger();
     setTimeout(() => {
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      ref.current.scrollIntoView({ behavior: 'smooth' });
     }, 300);
   };
   return (
     <div
       className={`${
-        burgerState === "open"
-          ? "w-full h-screen transition-all duration-500 rounded-none opacity-100"
-          : "w-5 h-5 z-[100] rounded-full opacity-0"
+        burgerState === 'open'
+          ? 'w-full h-screen transition-all duration-500 rounded-none opacity-100'
+          : 'w-5 h-5 z-[100] rounded-full opacity-0'
       } flex flex-col justify-between fixed top-0 right-0 bg-white text-black text-center py-20 transition-all duration-500 z-[1]`}
     >
       <p
@@ -43,7 +43,7 @@ const Menu = () => {
         onMouseLeave={mouseOver}
         onClick={() => scrollTo(header)}
         className={`${
-          headerIsVisible ? "text-[#8D3030]" : ""
+          headerIsVisible ? 'text-[#8D3030]' : ''
         } uppercase text-3xl`}
       >
         About
@@ -53,7 +53,7 @@ const Menu = () => {
         onMouseLeave={mouseOver}
         onClick={() => scrollTo(skills)}
         className={`${
-          skillsIsVisible ? "text-[#8D3030]" : ""
+          skillsIsVisible ? 'text-[#8D3030]' : ''
         } uppercase text-3xl`}
       >
         Skills
@@ -63,7 +63,7 @@ const Menu = () => {
         onMouseLeave={mouseOver}
         onClick={() => scrollTo(work)}
         className={`${
-          workIsVisible ? "text-[#8D3030]" : ""
+          workIsVisible ? 'text-[#8D3030]' : ''
         } uppercase text-3xl`}
       >
         Work
@@ -73,7 +73,7 @@ const Menu = () => {
         onMouseLeave={mouseOver}
         onClick={() => scrollTo(contact)}
         className={`${
-          contactIsVisible ? "text-[#8D3030]" : ""
+          contactIsVisible ? 'text-[#8D3030]' : ''
         } uppercase text-3xl`}
       >
         Contact
